@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./styles/index.css">
+    <script src="https://kit.fontawesome.com/d68b37903c.js"></script>
+    <script src="./scripts/index.js" defer></script>
+    <title>Form</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            
+            <a href="#main">
+                <img src="./img/logo.png" alt="Company logo" class="logo-main">
+            </a>
+            
+        </header>
+        <form action="./form-handler.php" method="POST" class="form">
+            <section class="form-header">
+                <section class="order-details">
+                    <div class="order-details-main">
+                        <div class="order-details-header">
+                            <i class="fas fa-clipboard fa-2x"></i>
+                            <h3 class="order-details-heading">Your order</h3>
+                        </div>
+                        <ul class="order-details-list">
+                            <li>Items</li>
+                            <li>Details</li>
+                            <li>Price</li>
+                            <li>Delivery</li>
+                            <li class="additional-info">2 documents</li>
+                            <li class="additional-info">2 languages</li>
+                            <li class="additional-info">$ 696.06</li>
+                            <li class="additional-info">48 hours*</li>
+                        </ul>
+                    </div>
+                    <div class="order-details-button-wrapper">
+                        <button type="button" class="button button-place-order">Place order</button>
+                        <button type="button" class="button button-print">Print a quote</button>
+                    </div>
+                </section>
+                <section class="help">
+                    <div class="help-header">
+                        <i class="far fa-life-ring fa-2x"></i>
+                        <h3 class="help-heading">Help center</h3>
+                    </div>
+                    <p class="help-text additional-info">If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email.</p>
+                    <address class="help-contacts">
+                        <a href="tel:#">+971 (0) 555 555</a>
+                        <a href="mailto:#">help@qtest.com</a>
+                    </address>
+                </section>
+            </section>
+            <section class="form-section form-source-select">
+                <h1 class="heading form-source-select-heading">Select what you want to translate</h1>
+                <div class="form-source-list">
+                    <input 
+                        type="radio" 
+                        name="source-select-list" 
+                        id="source-one-radio" 
+                        class="visually-hidden radio">
+                    <label for="source-one-radio" class="custom-radio source-button" title="Select website as a source">
+                        <img src="./img/web-page.png" class="source-img" alt="Select website as a source">
+                        <span class="source-name">Website</span>
+                    </label>
+                    <input 
+                        type="radio" 
+                        name="source-select-list" 
+                        id="source-two-radio" 
+                        class="visually-hidden radio" 
+                        checked>
+                    <label for="source-two-radio" class="custom-radio source-button" title="Select documents as a source">
+                        <img src="./img/document.png" class="source-img" alt="Select documents as a source">
+                        <span class="source-name">Documents</span>
+                    </label>
+                    <input 
+                        type="radio" 
+                        name="source-select-list" 
+                        id="source-three-radio" 
+                        class="visually-hidden radio">
+                    <label for="source-three-radio" class="custom-radio source-button" title="Select social account as a source">
+                        <img src="./img/social.png" class="source-img" alt="Select social account as a source">
+                        <span class="source-name">Social account</span>
+                    </label>
+                </div>
+            </section>
+            <section class="form-section form-upload">
+                <header class="form-section-header form-upload-header">
+                    <h2 class="heading form-upload-heading">Upload your documents</h2>
+                    <p class="additional-info">(Doc, Docx, Text, PDF, Markdown)</p>
+                </header>
+                <input 
+                    type="file" 
+                    name="form-upload-input" 
+                    id="form-upload-input" 
+                    class="visually-hidden file-upload-button" 
+                    accept=".doc, .docx, .txt, .pdf, .htm, .html">
+                <label for="form-upload-input" class="button form-upload-button" title="Upload file for translate">
+                    <i class="fas fa-cloud-upload-alt fa-lg button-icon"></i>
+                    <span>Upload a new file</span>
+                </label>
+                <table class="form-upload-files-table">
+                    <thead class="table-head">
+                        <tr class="table-headings label-text-main">
+                            <th scope="col" class="file-info-name">File name</th>
+                            <th scope="col" class="file-info-size">File size</th>
+                            <th scope="col" class="file-info-words">Number of words</th>
+                            <th scope="col" class="file-info-remove">Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+                        <tr class="file-info">
+                            <td class="file-info-name">
+                                <i class="fas fa-file-alt fa-lg file-icon"></i>
+                                <span class="file-name">business_operations.docx</span>
+                            </td>
+                            <td class="file-info-size">78kb</td>
+                            <td class="file-info-words">842</td>
+                            <td class="file-info-remove">
+                                <button type="button" class="remove-button">
+                                    <i class="fas fa-trash fa-md button-icon remove-icon"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="file-info">
+                            <td class="file-info-name">
+                                <i class="fas fa-file-alt fa-lg file-icon"></i>
+                                <span class="file-name">business_financial.docx</span>
+                            </td>
+                            <td class="file-info-size">26kb</td>
+                            <td class="file-info-words">2,326</td>
+                            <td class="file-info-remove">
+                                <button type="button" class="remove-button">
+                                    <i class="fas fa-trash fa-md button-icon remove-icon"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="form-section form-lang">
+                <header class="form-section-header form-lang-header">
+                    <h2 class="heading form-lang-heading">Choose your languages pairings</h2>
+                </header>
+                <div class="source-lang">
+                    <span class="label-text-main">From</span>
+                    <label for="source-lang-list" class="lang-select-label" title="Select the language of the document to be translated">
+                        <select id="source-lang-list" class="button lang-button" name="source-lang-list">
+                            <option value="English" selected>English</option>
+                            <option value="Arabic">Arabic</option>
+                            <option value="Kurdish">French</option>
+                        </select>
+                        <span class="lang-select-icon">
+                            <i class="fas fa-caret-down fa-lg"></i>
+                        </span>
+                    </label>
+                </div>
+                <div class="output-lang">
+                    <span class="label-text-main">To</span>
+                    <label for="output-lang-first" class="lang-select-label" title="Select the language to translate">
+                        <select name="output-lang-first" id="output-lang-first" class="button lang-button">
+                            <option value="" disabled selected>Choose language</option>
+                            <option value="English">English</option>
+                            <option value="Arabic">Arabic</option>
+                            <option value="Kurdish">French</option>
+                        </select>
+                        <span class="lang-select-icon">
+                            <i class="fas fa-caret-down fa-lg"></i>
+                        </span>
+                    </label>
+                </div>
+            </section>
+            <section class="form-section form-tone-urgency-section">
+                <section class="form-section form-tone-section">
+                    <header class="form-section-header form-tone-header">
+                        <h2 class="heading form-tone-heading">Select your desired tone</h2>
+                    </header>
+    
+                    <input 
+                        type="radio" 
+                        name="tone-select-list" 
+                        id="friendly-tone-option" 
+                        class="visually-hidden radio">
+                    <label for="friendly-tone-option" class="button custom-radio tone-button" title="To choose friendly or casual tone as desired tone for the translate">
+                        <i class="fas fa-comments fa-lg button-icon"></i>
+                        <span>Friendly / Casual</span>
+                    </label>
+    
+                    <input 
+                        type="radio" 
+                        name="tone-select-list" 
+                        id="corporate-tone-option" 
+                        class="visually-hidden radio" 
+                        checked>
+                    <label for="corporate-tone-option" class="button custom-radio tone-button" title="To choose corporate or professional tone as desired tone for the translate">
+                        <i class="fas fa-suitcase fa-lg button-icon"></i>
+                        <span>Corporate / Pro</span>
+                    </label>
+    
+                    <input 
+                        type="radio" 
+                        name="tone-select-list" 
+                        id="media-tone-option" 
+                        class="visually-hidden radio">
+                    <label for="media-tone-option" class="button custom-radio tone-button" title="To choose media or formal tone as desired tone for the translate">
+                        <i class="fas fa-bullhorn fa-lg button-icon"></i>
+                        <span>Media / Formal</span>
+                    </label>
+                </section>
+                <section class="form-section form-urgency-section">
+                    <header class="form-section-header form-urgency-header">
+                        <h2 class="heading form-urgency-heading">Tell us how urgent this job is</h2>
+                    </header>
+                    
+                    <input 
+                        type="range" 
+                        name="urgency-slider" 
+                        id="urgency-slider" 
+                        min="0" 
+                        max="2" 
+                        step="1" 
+                        value="1">
+                    <label for="urgency-slider" class="label-text-main urgency-slider-label">
+                        <span class="label-point">I got time</span>
+                        <span class="label-point orange-text">Average</span>
+                        <span class="label-point">Yesterday</span>
+                    </label>
+    
+                    <div class="form-urgency-section-info">
+                        <i class="fas fa-info-circle fa-2x info-icon"></i>
+                        <h3 class="urgency-info-heading">Timeline info</h3>
+                        <p class="info-text additional-info">With an <span class="label-text-main orange-text">average</span> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation</p>
+                    </div>
+    
+                </section>
+            </section>
+            <section class="form-section form-payment-section">
+                <header class="form-section-header form-payment-header">
+                    <h2 class="heading form-payment-heading">Sign up and choose a payment method</h2>
+                </header>
+                <p class="sign-in-text">Already have an account with us? <a href="#sign-in" class="sign-in-link">Sign in.</a></p>
+                <div class="payment-section-user">
+                    <label class="payment-section-label user-name-label">
+                        <span class="label-text-main">Full name</span>
+                        <input 
+                            type="text" 
+                            name="user-name" 
+                            id="user-name" 
+                            class="payment-section-input user-name-input" 
+                            title="Enter your name" 
+                            placeholder="Your name" 
+                            minlength="8" 
+                            maxlength="32"
+                            pattern="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$"
+                            required>
+                            <i class="validation-icon valid-input-icon"></i>
+                            <i class="validation-icon invalid-input-icon"></i>
+                    </label>
+                        
+                    <label class="payment-section-label user-email-label">
+                        <span class="label-text-main">Email adress</span>
+                        <input 
+                            type="email" 
+                            name="user-email" 
+                            id="user-email" 
+                            class="payment-section-input user-email-input" 
+                            title="Enter your email" 
+                            placeholder="Your email" 
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            required>
+                            
+                        <i class="validation-icon valid-input-icon"></i>
+                        <i class="validation-icon invalid-input-icon"></i>
+                    </label>
+                    <label class="payment-section-label user-password-label">
+                        <span class="label-text-main">Choose a password</span>
+                        <input 
+                            type="password" 
+                            name="user-password" 
+                            id="user-password" 
+                            class="payment-section-input user-password-input" 
+                            title="Enter password" 
+                            placeholder="Password" 
+                            minlength="6" 
+                            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                            required>
+                            
+                        <i class="validation-icon valid-input-icon"></i>
+                        <i class="validation-icon invalid-input-icon"></i>
+                    </label>
+                </div>
+                <div class="payment-section-card">
+                    <label for="card-number" class="payment-section-label" title="Enter card number">
+                        <span class="label-text-main">Card number</span>
+                        <input 
+                            type="text" 
+                            inputmode="numeric" 
+                            name="card-number" 
+                            id="card-number" 
+                            class="payment-section-input card-number-input" 
+                            minlength="16" 
+                            maxlength="19" 
+                            placeholder="1111-2222-3333-4444" 
+                            pattern="^(\d{4}[- ]){3}\d{4}|\d{16}$"
+                            required>
+                            
+                    <i class="validation-icon valid-input-icon"></i>
+                    <i class="validation-icon invalid-input-icon"></i>
+                    </label>
+                    <label for="card-expiry-date" class="payment-section-label" title="Card expiry date">
+                        <span class="label-text-main">Expiry date</span>
+                        <input 
+                            type="month" 
+                            name="card-expiry-date" 
+                            id="card-expiry-date" 
+                            class="payment-section-input card-expiry-date-input" 
+                            value="2022-07"
+                            pattern="[0-9]{4}-[0-9]{2}"
+                            required>
+                            <!-- 'pattern' used for the browsers without month input support -->
+                    </label>
+                    <label for="card-code" class="payment-section-label" title="Enter card CVV2/CVC2">
+                        <span class="label-text-main">Code</span>
+                        <input 
+                            type="text" 
+                            inputmode="numeric" 
+                            name="card-code" 
+                            id="card-code" 
+                            class="payment-section-input card-code-input" 
+                            minlength="3" 
+                            maxlength="3" 
+                            placeholder="123" 
+                            pattern="^\d{3}$"
+                            required>
+                            
+                    <i class="validation-icon valid-input-icon"></i>
+                    <i class="validation-icon invalid-input-icon"></i>
+                    </label>
+                </div>
+
+            </section>
+            <section class="form-section form-submit">
+                <input 
+                    type="checkbox" 
+                    name="terms-checkbox" 
+                    id="terms-checkbox" 
+                    required>
+                <label for="terms-checkbox">I agree to the <a href="#terms">Terms & Conditions</a></label>
+                <button type="submit" class="button button-place-order">Place order</button>
+                <button type="button" class="button button-print">Print a quote</button>
+            </section>
+        </form>
+    </div>    
+</body>
+</html>
